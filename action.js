@@ -39,6 +39,8 @@ async function run() {
 
   const { data } = latestRelease
 
+  core.info(`Got SHA: ${data.target_commitish}`)
+
   core.setOutput('url', data.url)
   core.setOutput('assets_url', data.assets_url)
   core.setOutput('upload_url', data.upload_url)
